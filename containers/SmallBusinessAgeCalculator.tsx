@@ -1,8 +1,9 @@
 import { Container, Divider, Grid, Input, Text } from "@nextui-org/react";
+import Anvil from "@/components/Anvil";
 
 function SmallBusinessAgeCalculator() {
   return (
-    <Container xs>
+    <Container xs style={{ position: "relative" }}>
       <Text h2>중소기업 취업자 연령 계산 - 소득세 감면</Text>
       <Grid.Container gap={2} justify="center">
         <Grid xs={6}>
@@ -40,6 +41,7 @@ function SmallBusinessAgeCalculator() {
         </Grid>
       </Grid.Container>
       <Divider y={2} />
+      <Anvil />
     </Container>
   );
 }

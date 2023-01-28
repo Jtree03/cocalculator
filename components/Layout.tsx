@@ -1,5 +1,6 @@
-import { Container } from "@nextui-org/react";
 import { ReactNode } from "react";
+import { Container, Spacer } from "@nextui-org/react";
+import Badges from "./Badges";
 import Navbar from "./Navbar";
 
 type Props = {
@@ -10,12 +11,10 @@ function Layout({ children }: Props) {
   return (
     <>
       <Navbar />
-      <Container
-        style={{ paddingTop: 40 }}
-        display="flex"
-        alignItems="center"
-        justify="center"
-      >
+      <Spacer y={1} />
+      <Badges />
+      <Spacer y={1} />
+      <Container display="flex" alignItems="center" justify="center">
         {children}
       </Container>
     </>

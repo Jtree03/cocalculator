@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Container,
   Divider,
@@ -7,11 +6,11 @@ import {
   Spacer,
   Text,
 } from "@nextui-org/react";
-import { calculatePercent, toMeter, toPyeong } from "@/services/pyeong";
+import Anvil from "@/components/Anvil";
 
 function InterestCalculator() {
   return (
-    <Container xs>
+    <Container xs style={{ position: "relative" }}>
       <Text h2>이자 계산기</Text>
       <Grid.Container gap={2} justify="center">
         <Grid xs={6}>
@@ -49,6 +48,7 @@ function InterestCalculator() {
         <Grid xs={6}></Grid>
       </Grid.Container>
       <Spacer y={1} />
+      <Anvil />
     </Container>
   );
 }

@@ -2,6 +2,8 @@ import { Container, Navbar, Spacer, Text } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { BsGithub } from "react-icons/bs";
+import { AiOutlineMail } from "react-icons/ai";
 
 function MyNavbar() {
   const router = useRouter();
@@ -17,34 +19,16 @@ function MyNavbar() {
           </Container>
         </Link>
       </Navbar.Brand>
-      <Navbar.Content>
-        <Link href="/calculator/age" passHref legacyBehavior>
-          <Navbar.Link isActive={router.pathname === "/calculator/age"}>
-            나이 계산기
-          </Navbar.Link>
-        </Link>
-        <Link href="/calculator/pyeong" passHref legacyBehavior>
-          <Navbar.Link isActive={router.pathname === "/calculator/pyeong"}>
-            평 계산기
-          </Navbar.Link>
-        </Link>
-        <Link href="/calculator/interest" passHref legacyBehavior>
-          <Navbar.Link isActive={router.pathname === "/calculator/interest"}>
-            이자 계산기
-          </Navbar.Link>
-        </Link>
-        <Link href="/calculator/small-business-age" passHref legacyBehavior>
-          <Navbar.Link
-            isActive={router.pathname === "/calculator/small-business-age"}
-          >
-            중소기업 취업자 연령
-          </Navbar.Link>
-        </Link>
-        <Link href="/calculator/year-end" passHref legacyBehavior>
-          <Navbar.Link isActive={router.pathname === "/calculator/year-end"}>
-            연말 정산 예상 세액
-          </Navbar.Link>
-        </Link>
+      <Navbar.Content gap={30}>
+        <Navbar.Link target="_blank" href="mailto:wowns0903@gmail.com">
+          <AiOutlineMail size={28} />
+        </Navbar.Link>
+        <Navbar.Link
+          target="_blank"
+          href="https://github.com/jtree03/cocalculator"
+        >
+          <BsGithub size={25} />
+        </Navbar.Link>
       </Navbar.Content>
     </Navbar>
   );
